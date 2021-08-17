@@ -1,0 +1,24 @@
+{
+  "name": "useful-script",
+  "version": "1.0.0",
+  "description": "用于打包部署useful-cli创建的前端项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yucheng1207/useful-script.git"
+  },
+  "keywords": [
+    "useful-cli",
+    "build",
+    "deploy"
+  ],
+  "author": "yucheng1207",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yucheng1207/useful-script/issues"
+  },
+  "homepage": "https://github.com/yucheng1207/useful-script#readme"
+}
