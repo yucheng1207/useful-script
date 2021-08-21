@@ -1,6 +1,6 @@
 {
     "name": "useful-scripts",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "用于打包部署useful-cli创建的前端项目",
     "main": "bld/src/index.js",
     "bin": {
@@ -54,6 +54,6 @@
         "typescript": "^4.3.5",
         "typescript-transform-paths": "^2.2.4",
         "url": "^0.11.0",
-        "webpack": "^5.51.1"
+        "webpack": "^4.43.0"
     }
 }
