@@ -5,14 +5,19 @@
         "module": "commonjs",
         "allowJs": true,
         "outDir": "bld",
-        "rootDir": "src",
+        "rootDir": ".",
         "strict": false,
         "noImplicitAny": false,
         "alwaysStrict": true,
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "plugins": [{ "transform": "typescript-transform-paths" }]
+        "resolveJsonModule": true,
+        "plugins": [{ "transform": "typescript-transform-paths" }],
+        "baseUrl": "src",
+        "paths": {
+            "@utils/*": ["utils/*"]
+        }
     },
     "include": ["src"],
     "exclude": ["node_modules"]
