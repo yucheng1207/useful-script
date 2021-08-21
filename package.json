@@ -1,24 +1,48 @@
 {
-  "name": "useful-script",
-  "version": "1.0.0",
-  "description": "用于打包部署useful-cli创建的前端项目",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yucheng1207/useful-script.git"
-  },
-  "keywords": [
-    "useful-cli",
-    "build",
-    "deploy"
-  ],
-  "author": "yucheng1207",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yucheng1207/useful-script/issues"
-  },
-  "homepage": "https://github.com/yucheng1207/useful-script#readme"
+    "name": "useful-script",
+    "version": "1.0.0",
+    "description": "用于打包部署useful-cli创建的前端项目",
+    "main": "bld/bin/index.js",
+    "bin": {
+        "mesh": "./bld/bin/index.js"
+    },
+    "scripts": {
+        "compile": "tsc",
+        "lint": "eslint src/**/*.ts",
+        "lint:fix": "eslint src/**/*.ts --fix",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn lint"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yucheng1207/useful-script.git"
+    },
+    "keywords": [
+        "useful-cli",
+        "build",
+        "deploy"
+    ],
+    "author": "yucheng1207",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/yucheng1207/useful-script/issues"
+    },
+    "homepage": "https://github.com/yucheng1207/useful-script#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.29.2",
+        "@typescript-eslint/parser": "^4.29.2",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "husky": "^4.2.5",
+        "prettier": "^2.3.2",
+        "ttypescript": "^1.5.12",
+        "typescript": "^4.3.5",
+        "typescript-transform-paths": "^3.3.1"
+    }
 }

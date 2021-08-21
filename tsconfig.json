@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        /* refrence: https://www.tslang.cn/docs/handbook/compiler-options.html */
+        "target": "esnext",
+        "module": "commonjs",
+        "allowJs": true,
+        "outDir": "bld",
+        "rootDir": "src",
+        "strict": false,
+        "noImplicitAny": false,
+        "alwaysStrict": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "plugins": [{ "transform": "typescript-transform-paths" }]
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+}
