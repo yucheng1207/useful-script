@@ -1,0 +1,10 @@
+APP_VERSION=`cat package.json | grep version | cut -d\" -f 4`
+PUBLISH="publishOnly"
+if [ "$2" == "$PUBLISH" ]; then
+    npm publish
+else
+    git tag -a v$APP_VERSION -m "$1"
+    git push origin --tags
+	npm publish
+fi
+
