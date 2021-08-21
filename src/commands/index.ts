@@ -2,7 +2,7 @@ import { AppTypes, EnvTypes } from '../index';
 import * as ora from 'ora'
 import * as chalk from 'chalk'
 import * as webpack from 'webpack'
-const paths = require('../config/paths')
+import paths from '../configs/paths'
 
 export function build(appType: AppTypes, envType: EnvTypes, options?: object)
 {

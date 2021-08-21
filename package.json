@@ -1,6 +1,6 @@
 {
     "name": "useful-scripts",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "用于打包部署useful-cli创建的前端项目",
     "main": "bld/src/index.js",
     "bin": {
@@ -45,7 +45,6 @@
         "eslint": "^7.32.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^3.4.0",
-        "fs": "^0.0.1-security",
         "husky": "^4.2.5",
         "inquirer": "^8.1.2",
         "minimist": "^1.2.5",

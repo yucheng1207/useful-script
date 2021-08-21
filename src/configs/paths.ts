@@ -41,9 +41,9 @@ function getServedPath(appPackageJson)
 	return ensureSlash(servedUrl, true)
 }
 
-const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath)
+export const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath)
 
-module.exports = {
+export default {
 	dotenv: () => resolveApp('.env'),
 	appPath: () => resolveApp('.'),
 	appBuild: () => resolveApp('dist'),
