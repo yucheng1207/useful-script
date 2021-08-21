@@ -49,5 +49,11 @@
         "ttypescript": "^1.5.12",
         "typescript": "^4.3.5",
         "typescript-transform-paths": "^2.2.4"
+    },
+    "dependencies": {
+        "fs": "^0.0.1-security",
+        "path": "^0.12.7",
+        "url": "^0.11.0",
+        "webpack": "^5.51.1"
     }
 }
