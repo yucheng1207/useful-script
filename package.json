@@ -1,6 +1,6 @@
 {
     "name": "useful-scripts",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "用于打包部署useful-cli创建的前端项目",
     "main": "bld/src/index.js",
     "bin": {
@@ -11,7 +11,7 @@
         "lint": "eslint src/**/*.ts",
         "lint:fix": "eslint src/**/*.ts --fix",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "deploy": "yarn compile && ./scripts/add_tag"
+        "deploy": "yarn compile && ./scripts/add_tag && yarn publish"
     },
     "husky": {
         "hooks": {
