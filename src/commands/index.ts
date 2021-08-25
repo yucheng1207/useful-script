@@ -16,9 +16,9 @@ import paths from '../configs/paths'
 export function build(appType: AppTypes, envType: EnvTypes, options?: object)
 {
 	console.log("start build", appType, envType, options)
-	if (EnvTypes[envType])
+	if (Object.values(EnvTypes).includes(envType))
 	{
-		process.env.NODE_ENV = EnvTypes[envType];
+		process.env.NODE_ENV = envType;
 		console.log(`Current app path: ${chalk.blue(paths.appPath())}`)
 
 		// Remove all content but keep the directory so that

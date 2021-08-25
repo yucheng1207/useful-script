@@ -19,8 +19,6 @@ yarn deploy 'xxxxx'
 # 部署
 
 ```
-yarn publish
-// 或
 npm publish
 ```
 
@@ -31,5 +29,5 @@ npm publish
 ```
 git push
 yarn deploy 'xxxxx'
-yarn publish
+npm publish
 ```
