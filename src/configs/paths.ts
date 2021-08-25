@@ -43,10 +43,15 @@ function getServedPath(appPackageJson)
 
 export const resolveOwn = relativePath => path.resolve(__dirname, '..', relativePath)
 
+const buildPath = process.env.BUILD_PATH || 'build';
+
 export default {
 	dotenv: () => resolveApp('.env'),
 	appPath: () => resolveApp('.'),
-	appBuild: () => resolveApp('dist'),
+	appBuild: () => resolveApp(buildPath),
+	appPublic: () => resolveApp('public'),
+	appHtml: () => resolveApp('public/index.html'),
+	appStatic: () => resolveApp('static'),
 	appIndexJs: () => resolveApp('bld/index.js'),
 	appIndexTs: () => resolveApp('src/index.ts'),
 	appPackageJson: () => resolveApp('package.json'),
@@ -60,7 +65,4 @@ export default {
 	servedPath: () => getServedPath(resolveApp('package.json')),
 	ownPath: () => resolveOwn('.'),
 	ownNodeModules: () => resolveOwn('node_modules'),
-	appHtml: () => resolveOwn('../public/index.html'),
-	appPublic: () => resolveOwn('../public'),
-	appStatic: () => resolveApp('static'),
 }

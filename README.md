@@ -23,3 +23,13 @@ yarn publish
 // 或
 npm publish
 ```
+
+# 发布流程
+
+将代码推到 github -> 编译 & 打 tag -> 发布
+
+```
+git push
+yarn deploy 'xxxxx'
+yarn publish
+```

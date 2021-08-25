@@ -14,10 +14,10 @@ export enum AppTypes
 
 export enum EnvTypes
 {
-	DEV = 'dev',	// 开发环境
-	TEST = 'test',	// 测试环境
-	RC = 'rc',		// 预正式环境
-	PROD = 'prod',	// 正式环境
+	DEV = 'development',	// 开发环境
+	TEST = 'test',			// 测试环境
+	RC = 'production:rc',	// 预正式环境
+	PROD = 'production',	// 正式环境
 }
 
 program.version(packageJson.version, '-v, --version')
