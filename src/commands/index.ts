@@ -5,13 +5,13 @@ import * as webpack from 'webpack'
 import * as fs from "fs-extra"
 import paths from '../configs/paths'
 
-function copyPublicFolder()
-{
-	fs.copySync(paths.appPublic, paths.appBuild, {
-		dereference: true,
-		filter: file => file !== paths.appHtml,
-	});
-}
+// function copyPublicFolder()
+// {
+// 	fs.copySync(paths.appPublic, paths.appBuild, {
+// 		dereference: true,
+// 		filter: file => file !== paths.appHtml,
+// 	});
+// }
 
 export function build(appType: AppTypes, envType: EnvTypes, options?: object)
 {
@@ -25,7 +25,7 @@ export function build(appType: AppTypes, envType: EnvTypes, options?: object)
 		// if you're in it, you don't end up in Trash
 		fs.emptyDirSync(paths.appBuild);
 		// Merge with the public folder
-		copyPublicFolder();
+		// copyPublicFolder(); // 这里可以不拷贝，而是在webpack中使用CopyWebpackPlugin拷贝public中的文件
 
 		const webpackConfig = require(`${paths.appPath()}/config/webpack.prod.conf`);
 

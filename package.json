@@ -1,6 +1,6 @@
 {
     "name": "useful-scripts",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "用于打包部署useful-cli创建的前端项目",
     "main": "bld/src/index.js",
     "bin": {
