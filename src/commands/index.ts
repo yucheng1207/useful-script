@@ -7,9 +7,9 @@ import paths from '../configs/paths'
 
 // function copyPublicFolder()
 // {
-// 	fs.copySync(paths.appPublic, paths.appBuild, {
+// 	fs.copySync(paths.appPublic(), paths.appBuild(), {
 // 		dereference: true,
-// 		filter: file => file !== paths.appHtml,
+// 		filter: file => file !== paths.appHtml(),
 // 	});
 // }
 
@@ -23,7 +23,7 @@ export function build(appType: AppTypes, envType: EnvTypes, options?: object)
 
 		// Remove all content but keep the directory so that
 		// if you're in it, you don't end up in Trash
-		fs.emptyDirSync(paths.appBuild);
+		fs.emptyDirSync(paths.appBuild());
 		// Merge with the public folder
 		// copyPublicFolder(); // 这里可以不拷贝，而是在webpack中使用CopyWebpackPlugin拷贝public中的文件
 
@@ -66,5 +66,5 @@ export function build(appType: AppTypes, envType: EnvTypes, options?: object)
 
 export function deploy(appType: AppTypes, envType: EnvTypes, options?: object)
 {
-	console.log("start deploy", appType, envType, options)
+	console.log(chalk.red("No deployment function is implemented yet!"), appType, envType, options)
 }
