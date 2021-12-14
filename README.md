@@ -25,3 +25,9 @@ yarn deployOnly
 ```
 yarn deploy 'xxxxx'
 ```
+
+# 开发笔记
+
+## webpack
+
+`webpack`依赖放到了`devDependencies`是因为为了防止当前项目`webpack`版本影响到打包项目
