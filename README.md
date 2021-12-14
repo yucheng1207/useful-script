@@ -10,24 +10,18 @@ yarn compile
 npm run compile
 ```
 
-# 打 tags
-
-```
-yarn deploy 'xxxxx'
-```
-
 # 部署
 
 ```
-npm publish
+yarn deploy
+// 或
+yarn deployOnly
 ```
 
 # 发布流程
 
-将代码推到 github -> 编译 & 打 tag -> 发布
+将代码推到 github -> 编译 & 打 tag -> 发布，执行`yarn deploy`带上部署描述即可
 
 ```
-git push
 yarn deploy 'xxxxx'
-npm publish
 ```

@@ -11,7 +11,8 @@
         "lint": "eslint src/**/*.ts",
         "lint:fix": "eslint src/**/*.ts --fix",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "deploy": "npm run compile && ./scripts/add_tag"
+        "deploy": "npm run compile && ./scripts/tag_and_deploy",
+        "deployOnly": "npm run compile && npm adduser && npm publish"
     },
     "husky": {
         "hooks": {
